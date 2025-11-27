@@ -5,6 +5,9 @@ This repository contains all scripts, workflow descriptions, and supplementary m
 
 **“Cooling Effects in Large Urban Mountains: A Case Study of Chengdu Longquan Mountains Urban Forest Park, China.”**
 
+<img width="1119" height="1474" alt="graphical abstract forests-3996816" src="https://github.com/user-attachments/assets/53b0b153-44d9-4586-87c4-bba0eab7332e" />
+
+
 1. Overview
 
 This repository contains the code, datasets, and analysis for the paper titled "Cooling Effects in Large Urban Mountains: A Case Study of Chengdu Longquan Mountains Urban Forest Park." The study investigates the cooling effects of the Longquan Mountain Forest Park (LMFP) and its role in mitigating the Urban Heat Island (UHI) effect. The main focus is on the spatiotemporal variation of cooling effects and their driving factors.
@@ -15,17 +18,11 @@ This repository contains the code, datasets, and analysis for the paper titled "
 
 /scripts: Python and R scripts for data processing, analysis, and model building.
 
-LST_retrieval.py: Scripts for retrieving and processing LST data from Landsat imagery.
-
 data_preprocessing.py: Scripts for preprocessing various datasets (e.g., vegetation indices, road density).
 
 xgboost_model.py: Code for training the XGBoost model to predict cooling intensity.
 
 shap_analysis.py: Code for generating SHAP plots to explain the model.
-
-/figures: Contains the code and resulting images for all the figures in the paper, such as the spatial distribution of cooling effects and feature importance analysis.
-
-/tables: Code for generating tables, such as the summary of results on cooling distances and areas.
 
 3. Installation and Setup
 
@@ -81,8 +78,6 @@ Run the preprocessing scripts to clean and prepare the data.
 
 Train the XGBoost model using the provided code.
 
-Generate the figures and tables using the code in the /figures and /tables directories.
-
 7. Acknowledgments
 
 The authors would like to thank the following data providers for their contributions:
@@ -101,9 +96,9 @@ Folder Structure
 Cooling_Effects_Large_Urban_Mountains/
 │
 ├── data/
-│   ├── LST_2001.tif
-│   ├── LST_2011.tif
-│   ├── LST_2023.tif
+│   ├── 20010614_lst.tif
+│   ├── 20110630_lst.tif
+│   ├── 20230705_lst.tif
 │   ├── vegetation_data.csv
 │   └── human_activity_data.csv
 │
@@ -112,13 +107,7 @@ Cooling_Effects_Large_Urban_Mountains/
 │   ├── data_preprocessing.py
 │   ├── xgboost_model.py
 │   └── shap_analysis.py
-│
-├── figures/
-│   ├── cooling_effect_map.png
-│   └── feature_importance.png
-│
-├── tables/
-│   └── cooling_effect_summary.csv
+
 │
 └── README.md
 
