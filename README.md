@@ -7,6 +7,39 @@ The project evaluates the spatiotemporal cooling effects of Longquan Mountain Ur
 
 ---
 
+## Contents
+This repository contains metadata, processed data, and code related to the research paper **"Cooling Effects in Large Urban Mountains: A Case Study of Chengdu Longquan Mountains Urban Forest Park."** The dataset and results are made publicly available for reproducibility and further research.
+
+### Access the full dataset here:
+[Cooling Effects in Large Urban Mountains](https://drive.google.com/drive/folders/1gHX0cKLMEcOywOjteYwzoPeOFOCIylf1?usp=sharing)
+
+<img width="1174" height="539" alt="image" src="https://github.com/user-attachments/assets/0495888a-cc8b-454a-8bb6-df23b28d5f30" />
+
+- `Cooling_Effects_Large_Urban_Mountains/`: Root directory containing the dataset and analysis files.
+  - `driverFactor/`: Contains driving factors and model results.
+    - `2001/`: Processed data for 2001 (standardized CSV, SHAP results).
+    - `2011/`: Processed data for 2011.
+    - `2023/`: Processed data for 2023.
+    - `XGB2001/`: XGBoost results for 2001 (models, plots, and feature importance).
+    - `XGB2011/`: XGBoost results for 2011.
+    - `XGB2023/`: XGBoost results for 2023.
+    - `venv/`: Optional Python virtual environment for running the scripts.
+    - `data_preprocessing.R`: R script for data cleaning and variable generation.
+    - `PDP.R`: R script for generating partial dependence plots.
+    - `biased_ranking.R`: Feature ranking validation using R.
+    - `shap-XGboost.py`: Python script for running XGBoost and SHAP analysis.
+  - `LST/`: Raw Landsat Land Surface Temperature (LST) files.
+    - `20010614_lst.tif`: LST data for June 14, 2001.
+    - `20110630_lst.tif`: LST data for June 30, 2011.
+    - `20230705_lst.tif`: LST data for July 5, 2023.
+  - `MCI/`: Mountain Cooling Intensity (MCI) output results.
+  - `scope/`: Geographic scope for the study area.
+    - `lqs.shp`: Study area boundary for Longquan Mountain.
+
+## Description
+
+This dataset contains the input data and model results used for analyzing the cooling effects in large urban mountains, specifically focusing on Chengdu's Longquan Mountains Urban Forest Park. It includes processed data, model results using XGBoost, raw satellite data (Landsat LST), and the Mountain Cooling Intensity (MCI) output. Additionally, various R and Python scripts are provided for data preprocessing, analysis, and visualization.
+
 ##  Key Objectives
 
 1. **Retrieve and analyze Land Surface Temperature (LST)** for 2001, 2011, and 2023.  
@@ -152,35 +185,6 @@ Rscript driverFactor/PDP.R
 Spatial maps, PDP curves, and cooling-distance figures.
 
 SHAP shows clear nonlinear patterns and strong vegetation–terrain interactions.
-
-## **Contents**
-
-Cooling_Effects_Large_Urban_Mountains/
-│
-├── driverFactor/ # Driving factors & model results
-│ ├── 2001/ # Processed data (standardized CSV, SHAP results)
-│ ├── 2011/
-│ ├── 2023/
-│ ├── XGB2001/ # XGBoost results (models, plots, importance)
-│ ├── XGB2011/
-│ ├── XGB2023/
-│ ├── venv/ # Python virtual environment (optional)
-│ ├── data_preprocessing.R # R script for data cleaning and variable generation
-│ ├── PDP.R # Partial Dependence Plot (R)
-│ ├── biased_ranking.R # Feature ranking validation
-│ └── shap-XGboost.py # Python script for XGBoost + SHAP
-│
-├── LST/ # Raw Landsat LST files (input)
-│ ├── 20010614_lst.tif
-│ ├── 20110630_lst.tif
-│ └── 20230705_lst.tif
-│
-├── MCI/ # Mountain Cooling Intensity (output)
-│
-├── scope/
-│ └── lqs.shp # Study area boundary (Longquan Mountain)
-│
-└── README.md
 
 ## **Contact**
 
